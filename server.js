@@ -1,6 +1,11 @@
 import express from 'express';  // node imports this from node_modules
+import connectDatabase from './config/db';
+
 
 const app = express();  //creating express object named app
+
+//Connect to Db
+connectDatabase();
 
 //API endpoints
 app.get('/', (req, res) =>
